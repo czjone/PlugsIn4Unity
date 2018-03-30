@@ -1,4 +1,5 @@
 {
 	"egregRoot" :"/Users/solyess/Documents/work/CellGame/unity/cn",
-	"debug" :"false"
+	"debug" :"false",
+	"CheckResLog" :"/Users/solyess/Documents/work/CellGame/unity/cn"
 }
