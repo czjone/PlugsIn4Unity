@@ -18,7 +18,7 @@ public class TextureEditor  {
 
     static Object targetObj;
 
-    [MenuItem("XGame/Egret/ImageSlice")]
+    [MenuItem("CellsGame/Tools/BatchSpriteSciliping")]
     static void BatchSpriteSciliping() {
         ReadEui2HashTable();
         UnityEngine.Object[] arr=Selection.GetFiltered(typeof(UnityEngine.Object), SelectionMode.TopLevel);  
@@ -35,9 +35,10 @@ public class TextureEditor  {
                 texture.filterMode = FilterMode.Bilinear;
                 texture.spritePixelsPerUnit = 100;
                 texture.mipmapEnabled = false;
-                var slice = GetSceliping(texture);
+                var slict = GetSceliping(texture);
                 var size = GetImageSize(texture);
-                texture.spriteBorder = new Vector4(slice.x,size.y - slice.y, size.x - slice.z,slice.w);
+                // var size = new Vector2(52,72);
+                texture.spriteBorder = new Vector4(slict.x, size.y - slict.y - slict.w, size.x - slict.x - slict.z,slict.y);
                 AssetDatabase.ImportAsset(path);
             }
         }
